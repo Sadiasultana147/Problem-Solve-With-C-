@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    // Read the size of the matrix
+    scanf("%d", &N);
+    
+    int A[N][N]; // Declare the 2D array with maximum size 100x100
+    // Read the elements of the matrix
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+    printf("full Matrix: \n");
+     for (int i = 0; i < N; i++) {
+         for(int j=0; j<N; j++){
+             printf("%d ", A[i][j]);
+         }
+        printf("\n");
+    }
+    printf("\n");
+    printf("Primary diagonal Of Square Natrix: \n");
+    for (int i = 0; i < N; i++) {
+        printf("%d ",A[i][i] );// Primary diagonal
+       
+    }
+     printf("\n");
+    printf("Second diagonal Of Square Natrix: \n");
+     for (int i = 0; i < N; i++) {
+        printf("%d ",A[i][N-1-i] );// Second diagonal
+       
+    }
+    printf("\n");
+    return 0;
+}
