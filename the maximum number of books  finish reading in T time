@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    int T;
+    scanf("%d %d", &N, &T);
+    int sum=0;
+    int totalbooks=0;
+    for(int i=1; i<=N; i++){
+        int totalBookReading;
+        scanf("%d", &totalBookReading);
+        sum+=totalBookReading;
+        if(sum<=T){
+            totalbooks++;
+        }
+        
+    }
+    printf("%d", totalbooks);
+
+    return 0;
+}
