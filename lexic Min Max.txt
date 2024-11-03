@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char S1[100001];
+    char S2[100001];
+    char S3[100001];
+    scanf("%s %s %s", S1, S2, S3);
+    char minimumString[100001];
+    char maximumString[100001];
+    strcpy(minimumString, S1);
+    strcpy(maximumString, S1);
+    
+    if (strcmp(S2, minimumString) < 0) {
+        strcpy(minimumString, S2);
+    }
+    if (strcmp(S2, maximumString) > 0) {
+        strcpy(maximumString, S2);
+    }
+    
+    if (strcmp(S3, minimumString) < 0) {
+        strcpy(minimumString, S3);
+    }
+    if (strcmp(S3, maximumString) > 0) {
+        strcpy(maximumString, S3);
+    }
+    
+    
+    printf("%s\n", minimumString);
+    printf("%s\n", maximumString);
+    
+    return 0;
+}
