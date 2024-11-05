@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+   int N;
+   int targetNumber;
+   scanf("%d", &N);
+   scanf("%d", &targetNumber);
+   int arr[N];
+   int found = 0;
+   for(int i=0; i<N; i++){
+       scanf("%d", &arr[i]);
+   }
+    for(int i=0; i<N; i++){
+        for(int j=i+1; j<N; j++){
+            printf("Checking pair (%d, %d)\n", arr[i], arr[j]);
+            if (targetNumber == arr[i] * arr[j]) {
+               printf("{%d, %d} ", arr[i], arr[j]);
+               printf("\n");
+               found = 1;
+           }
+        }
+    }
+    if (!found) {
+       printf("{}\n");
+   }
+    return 0;
+}
