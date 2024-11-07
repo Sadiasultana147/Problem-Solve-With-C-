@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+void digit(int m,char numbers[1000001]){
+    if(m>=strlen(numbers)){
+        return;
+    }
+    else{
+        printf("%c ", numbers[m]);
+        digit(m+1, numbers);
+    }
+}
+void digitPrint(int i,int N,int m){
+    char numbers[1000001];
+    if(i>N){
+        return;
+    }
+    else{
+        scanf("%s", &numbers);
+         digit(0, numbers);
+    }
+    printf("\n");
+    digitPrint(i+1, N,0);
+    
+}
+int main() {
+   int N;
+  scanf("%d", &N);
+  digitPrint(1,N,0);
+  return 0;
+}
